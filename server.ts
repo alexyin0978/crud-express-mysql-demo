@@ -20,6 +20,13 @@ app.use(
 // };
 // app.use(cors(corsOptions));
 
+// first router
+app.get("/", (_, res) => {
+  res.json({
+    message: "ok",
+  });
+});
+
 app.listen(port, () => {
   console.log(`server is listening to port ${port}`);
 });
