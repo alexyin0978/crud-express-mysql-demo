@@ -15,10 +15,10 @@ app.use(
   })
 );
 // define cors allow domains
-const corsOptions = {
-  origin: "https://chihkaiyin.blog",
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//   origin: "https://chihkaiyin.blog",
+// };
+// app.use(cors(corsOptions));
 
 app.listen(port, () => {
   console.log(`server is listening to port ${port}`);
