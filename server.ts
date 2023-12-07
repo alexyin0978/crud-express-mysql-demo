@@ -1,6 +1,7 @@
 import express from "express";
 // import cors from "cors";
 import dotEnv from "dotenv";
+import { postRouter } from "./app/router/post.router";
 dotEnv.config();
 
 const app = express();
@@ -26,6 +27,9 @@ app.get("/", (_, res) => {
     message: "ok",
   });
 });
+
+// post-related routers
+app.use("/post", postRouter);
 
 app.listen(port, () => {
   console.log(`server is listening to port ${port}`);
