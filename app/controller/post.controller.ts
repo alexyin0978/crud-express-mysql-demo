@@ -16,6 +16,7 @@ export const postController = {
     const postId = Number(req.params.postId);
     try {
       const rst = await postModel.selectPostById(postId);
+      res.send(rst);
     } catch (err) {
       res.status(500).send({
         message: `Some error occurred while retrieving post ${postId}`,

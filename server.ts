@@ -1,8 +1,9 @@
 import express from "express";
 // import cors from "cors";
 import dotEnv from "dotenv";
-import { postRouter } from "./app/router/post.router";
 dotEnv.config();
+
+import { postRouter } from "./app/router/post.router";
 
 const app = express();
 const port = process.env.SERVER_PORT || 8081;
